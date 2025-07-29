@@ -1,0 +1,391 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 1.5em;
+  gap: 1.2em;
+}
+.header a {
+  text-decoration: none;
+  color: #0095ff;
+  font-size: 1.1em;
+  transition: 0.5s;
+}
+.header a:hover {
+  color: black;
+}
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  margin-top: 4.5em;
+}
+
+.home .text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  width: 40%;
+}
+.home .text p {
+  font-size: 1.1em;
+  line-height: 1.8;
+  color: #565555;
+}
+.home .text h1 {
+  font-size: 3em;
+  font-weight: bold;
+}
+.watch img {
+  width: 85%;
+}
+.home .text button {
+  width: 27%;
+  padding: 1em;
+  border: none;
+  border-radius: 0.5em;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+}
+.home .text button::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #4a4a4b;
+  border-radius: 0.5em;
+  transition: 0.5s ease-in-out;
+  z-index: -1;
+}
+.home .text button:hover::after {
+  width: 100%;
+}
+@media screen and (max-width: 600px) {
+  .home {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5em;
+  }
+  .home .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 1em;
+  }
+  .home .text p {
+    width: 80%;
+    font-size: 1.3em;
+  }
+  .home .text button {
+    width: 50%;
+  }
+  .watch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .watch img {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .home {
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5em;
+  }
+  .home .text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 1em;
+  }
+  .home .text p {
+    width: 80%;
+    font-size: 1.3em;
+  }
+  .home .text button {
+    width: 50%;
+  }
+  .watch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .watch img {
+    width: 90%;
+  }
+}
+.New-Products {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  margin-top: 4.5em;
+  flex-wrap: wrap;
+}
+.products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.2em;
+  padding: 2.5em;
+}
+.products h1 {
+  width: 100%;
+  text-align: start;
+  font-size: 2em;
+  padding-left: 2.9em;
+}
+.image {
+  overflow: hidden;
+  position: relative;
+}
+.products .image img {
+  width: 95%;
+  transition: transform 1s ease-in-out;
+}
+.products .image img:hover {
+  transform: scale(1.1);
+}
+.products .product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5em;
+}
+.products p {
+  font-size: 1.5em;
+}
+.products span {
+  color: red;
+}
+@media screen and (max-width: 1000px) {
+  .products {
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .products h1 {
+    text-align: center;
+    padding-left: 0;
+  }
+  .products .image img {
+    width: 100%;
+  }
+  .products p {
+    font-size: 1.2em;
+  }
+}
+
+.New-Arrivals {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  padding: 2.5em;
+  text-align: center;
+  margin-top: 4.5em;
+}
+.Text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5em;
+}
+.Text p {
+  width: 75%;
+}
+.product1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5em;
+}
+.product1 p {
+  font-size: 1.3em;
+}
+.New-Arrivals .product1 img {
+  width: 85%;
+}
+
+.paragraph {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 2em;
+  z-index: 0;
+  cursor: pointer;
+}
+.paragraph p {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+.paragraph:hover p {
+  opacity: 0;
+}
+.paragraph::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: rgb(173, 0, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: 0.5s;
+}
+.add-to-cart {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(173, 0, 0);
+  color: white;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  font-size: 1.3em;
+  font-weight: bolder;
+  text-decoration: none;
+
+  opacity: 0;
+  transition: opacity 0.5s;
+  z-index: 1;
+}
+.paragraph:hover::after {
+  height: 100%;
+}
+.paragraph:hover .add-to-cart {
+  opacity: 1;
+  height: 100%;
+}
+.product1 span {
+  border-radius: 1em;
+  background-color: rgb(228, 228, 228);
+  padding: 0.5em;
+  width: 80%;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: red;
+}
+@media screen and (max-width: 1000px) {
+  .New-Arrivals {
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .Text {
+    text-align: center;
+    padding: 1em;
+  }
+  .Text p {
+    width: 90%;
+  }
+  .product1 img {
+    width: 100%;
+  }
+  .product1 p {
+    font-size: 1.2em;
+  }
+}
+
+.Last {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  margin-top: 4.5em;
+  padding: 0.5em;
+}
+.left {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.photos img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.photos {
+  position: relative;
+  overflow: hidden;
+}
+.photos::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 1;
+}
+.photos:hover::after {
+  opacity: 1;
+}
+.photos img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease-in-out;
+  position: relative;
+  z-index: 0;
+}
+.photos:hover img {
+  transform: scale(1.1);
+}
+@media screen and (max-width: 1000px) {
+  .Last {
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .left {
+    align-items: center;
+  }
+  .right {
+    width: 100%;
+    align-items: center;
+    flex-direction: row;
+  }
+  .photos img {
+    width: 100%;
+    height: auto;
+  }
+}
