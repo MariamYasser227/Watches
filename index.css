@@ -44,11 +44,14 @@
   font-size: 3em;
   font-weight: bold;
 }
+.watch {
+  width: 35%;
+}
 .watch img {
-  width: 85%;
+  width: 100%;
 }
 .home .text button {
-  width: 27%;
+  width: 30%;
   padding: 1em;
   border: none;
   border-radius: 0.5em;
@@ -141,7 +144,8 @@
 }
 .New-Products {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 1.5em;
   margin-top: 4.5em;
   flex-wrap: wrap;
@@ -152,14 +156,14 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 0.2em;
-  padding: 2.5em;
 }
 .products h1 {
   width: 100%;
-  text-align: start;
+
   font-size: 2em;
-  padding-left: 2.9em;
+  padding-left: 4em;
 }
+
 .image {
   overflow: hidden;
   position: relative;
@@ -277,7 +281,6 @@
   font-size: 1.3em;
   font-weight: bolder;
   text-decoration: none;
-
   opacity: 0;
   transition: opacity 0.5s;
   z-index: 1;
